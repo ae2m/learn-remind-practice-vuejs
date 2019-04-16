@@ -1,0 +1,38 @@
+<template>
+    <div>
+        <h1>Events Listing</h1>
+        <EventCard v-for=" event in events" :key="event.id" :event="event"/>
+            
+        
+    </div>
+</template>
+
+<script>
+import EventCard from '@/components/EventCard'
+import EventService from '@/services/EventService.js'
+import axios from 'axios'
+
+export default {
+    components: {
+        EventCard
+    },
+    data: function(){
+        return {
+            events: []
+        }
+    },
+    created: function(){
+         EventService.getEvents()
+        .then(Response =>{
+            this.events = Response.data;
+        })
+        .catch(error => {
+            console.log(' There was an error: ' + error.Response);
+        })
+    }
+}
+</script>
+
+<style>
+
+</style>

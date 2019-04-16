@@ -1,0 +1,33 @@
+<template>
+    <div>
+        <h1>Create an Event, {{ user.name }} </h1>
+        <p>This event created by {{ user.id }} </p>
+        <p></p>
+    </div>
+</template>
+
+<script>
+
+import { mapState, mapGetters } from 'vuex'
+
+export default {
+  computed: {
+    ...mapGetters(['getEventById']),
+    ...mapState(['user', 'categories'])
+  }
+
+
+    /**    
+        userName: function(){
+            return this.$store.state.user.name
+        },
+        userId: function(){
+            return this.$store.state.user.id
+        }
+     */
+}
+</script>
+
+<style>
+
+</style>
