@@ -1,6 +1,6 @@
 # Automated testing: Web
  
-##Contents:
+## Contents:
 
 - [Required Software](#requiredsoftware)
 - [Setup Overview](#setupoverview)
@@ -26,16 +26,8 @@
     
 4. ngrok (Optional. If you plan to run test cases from laptop)
 
-## SetupOverview
-The below diagram represents the different components that are part of this testing setup.
+## Setup Overview
 
- ![Sequence](sequencediagram.png)
- 
- - _PayerFSP Simulator, PayeeFSP Simulator_: Mock Simulators that represent Payer and Payee FSPs that are used to receive the callbacks from Mojaloop switch and also to return default payer/payee details and quote responses.
-    These simulators are developed using Spring Boot framework and are provisioned once the tests are started using maven.
- - _Cucumber_: Represents the Cucumber-Java Step Definitions that sends the requests to the Switch and query PayerFSP/PayeeFSP for the callback responses.
- - _Switch_: Represents Mojaloop Switch against which all these test cases are executed.
- 
  **_Folder Structure_**
   - ``/src/main/java``
     - `com.mojaloop.fsp` - This package contains the classes PayerFsp and PayeeFsp. These are the Spring Boot Applications that simulate the functionality provided by a Payer and a Payee FSP respectively.
@@ -48,11 +40,8 @@ The below diagram represents the different components that are part of this test
   
  ## Running Tests
  There are different ways in which these tests can be executed. 
-  - From IDE - Intellij: 
+  - From IDE - PyCharm: 
     - Doing a Right-Click on the feature files gives you different options to run  the entire frature or a specific scenario.
-    - 
-  
-  - From IDE - Eclipse:
   
   - From Command Line: 
     - Apache maven should be successfully installed to run this command
