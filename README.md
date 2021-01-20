@@ -1,13 +1,13 @@
 # Automated testing: Web
  
-## Contents:
+#### Contents:
 
 - [Required Software](#requiredsoftware)
 - [Setup Overview](#setupoverview)
 - [Running Tests](#runningtests)
 - [Reports](#reports)
 
-## Required Software
+#### Required Software
 
 1. [JDK 1.8 or later](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 2. [Apache Maven](https://maven.apache.org/download.cgi)
@@ -18,15 +18,8 @@
     - Please refer to this link [Cucumber support in Intellij](https://www.jetbrains.com/help/idea/bdd-frameworks.html) to Enable Cucumber support in Intellij using Maven.
     - If not enabled by default, go to File -> Settings -> File Types. Select Cucumber Scenario and in Registered Patterns add '.feature".
     
-    3.2 [Eclipse](http://www.eclipse.org/downloads/) 
-    
-    - Once Eclipse is installed, Cucumber plugin needs to be installed. Click Help -> Install New Software and click "Add" in the "Work With" section.
-    - In the next screen to _Add Repository_, use "http://cucumber.github.com/cucumber-eclipse/update-site" in the Location field.
-    - In the next screen, click "Cucumber Eclipse Plugin" to install the plugin.
-    
-4. ngrok (Optional. If you plan to run test cases from laptop)
 
-## Setup Overview
+#### Setup Overview
 
  **_Folder Structure_**
   - ``/src/main/java``
@@ -38,7 +31,7 @@
   
   - `/test/java/stepdefs` - The sub-folders and the corresponding Classes in here has the code that implement Step Definitions in Cucumber Java.
   
- ## Running Tests
+ #### Running Tests
  There are different ways in which these tests can be executed. 
   - From IDE - PyCharm: 
     - Doing a Right-Click on the feature files gives you different options to run  the entire frature or a specific scenario.
